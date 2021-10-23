@@ -1,4 +1,5 @@
 # MEC-Ontario-Voting - Team S217
+Group members: Baoze Lin (@baogeist), Christina Lin (@clin1967), Sameer Waheed (@sxm), and Geon Youn (@geon-youn)
 "With the recent federal election taking Canadians back to the voting booths, many
 voters were left in long lines during the pandemic and stations were forced to keep polls
 open. Many opted to send their ballots in the mail which ensured their safety and that
