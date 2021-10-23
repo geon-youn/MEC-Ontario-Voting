@@ -1,26 +1,37 @@
+#imports
+##used for id text reading
 import cv2
 import pytesseract
+##imports used for gui creation
 import tkinter as tk
-import glob, os, shutil
 from tkinter import filedialog
 from tkinter.filedialog import askopenfilename
+##imports used for file selection
+import glob, os, shutil
+##imports for time
 from datetime import datetime
+##other imports
 import backend
 import csv
 
+#global variable
 choiceVote = ''
 
+#functions
+##functions for changing the time
 def changeTime():
     now-datetime.now()
     current_time = now.strftime("%H:%M")
     lblTime.config(text='Current Time is: ' + current_time)
 
+##functions to choose image
 def imageChoose():
     global sourcePath
     sourcePath = filedialog.askopenfilename()
     lblhold2.config(text='Uploaded')
-    changeTime
+    changeTime()
 
+##functions for validating the input
 def validate():
     global sourcePath
     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
@@ -47,8 +58,9 @@ def validate():
     else:
         lblhold3.config(text = 'ERROR: ID not recognized or does not match. Please try again.')
         return
-    changeTime
-                                  
+    changeTime()
+
+##function for the creating voting screen
 def votingScreen(votes):
     lblhold2.destroy()
     lblhold3.destroy()
@@ -67,8 +79,9 @@ def votingScreen(votes):
     lblThree.grid(row=2, column= 1, sticky = 'NSEW')
     btnSubmit2 = tk.Button(frmLeft, text= 'Submit Vote', command = finalVote, bg = "#425cc7", fg = 'white')
     btnSubmit2.grid(row=3, column=1, sticky = 'NSEW')
-    changeTime
-    
+    changeTime()
+
+##functions for party voting selections
 def buttonOne():
     global choiceVote
     choiceVote = 'Pineapple Pizza Party'
@@ -96,9 +109,9 @@ def finalVote():
     else:
         lblWelcome.config(text='You have already voted. \nVoter fraud a crime, the police have been notified and are en route')
         lblWelcome.config(bg = 'red')
-    changeTime
-    
-Font_tuple = ("Comic Sans MS", 20, "bold") 
+    changeTime()
+
+#python tkinter gui creation
 root = tk.Tk()
 root.title('Vote Ontario - Voter')
 lblWelcome = tk.Label(root, text = 'Welcome to Vote Ontario! Please Enter Your Last Name and First Name to be authenticated')
