@@ -1,5 +1,5 @@
 # MEC-Ontario-Voting - Team S217
-Group members: Baoze Lin (@baogeist), Christina Lin (@clin1967), Sameer Waheed (@sxm), and Geon Youn (@geon-youn)
+Group members: Baoze Lin ([@baogeist](https://github.com/BaoGeist)), Christina Lin ([@clin1967](https://github.com/clin1967)), Sameer Waheed ([@sxm](https://github.com/sxm)), and Geon Youn ([@geon-youn](https://github.com/geon-youn))
 
 "With the recent federal election taking Canadians back to the voting booths, many
 voters were left in long lines during the pandemic and stations were forced to keep polls
